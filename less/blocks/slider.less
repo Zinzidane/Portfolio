@@ -1,0 +1,59 @@
+.slider {
+  position: relative;
+  padding-bottom: 40px;
+}
+
+.slider__toggles {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+
+.slider input[type="radio"] {
+  position: absolute;
+  left: 50%;
+  bottom: 15px;
+  visibility: hidden;
+}
+
+.slider__toggles label {
+  display: inline-block;
+  height: 9px;
+  width: 9px;
+  margin:0 3px;
+  font-size: 0;
+  background-color: rgba(40, 54, 69, 0.3);
+  border-radius: 50%;
+  vertical-align: middle;
+  margin-right: 13px;
+  cursor: pointer;
+
+  &:first-child {
+    margin-left: 9px;
+  }
+}
+
+#btn-1:checked ~ .slider__toggles label[for="btn-1"],
+#btn-2:checked ~ .slider__toggles label[for="btn-2"] {
+  height: 18px;
+  width: 18px;
+  background-color: #ffffff;
+  border: 3px solid #283645;
+}
+
+.slider__item {
+  display: none;
+}
+
+input[type="radio"]#btn-1:checked ~ .slider__items #slide1,
+input[type="radio"]#btn-2:checked ~ .slider__items #slide2 {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+

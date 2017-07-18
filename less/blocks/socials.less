@@ -1,0 +1,49 @@
+.socials {
+  margin: 0;
+  padding: 0;
+}
+
+.socials__wrapper {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 50px;
+}
+
+.socials__title {
+  .visually-hidden();
+}
+
+.socials__link {
+  display: inline-block;
+  font-size: 0;
+  width: 60px;
+  height: 60px;
+  margin-left: 5px;
+  margin-right: 5px;
+  vertical-align: middle;
+  text-align: center;
+  border: 3px solid @lightgrey;
+  border-radius: 50%;
+  &--vk {
+    background: url("../../img/icon-vk.svg") center no-repeat;
+  }
+  &--li {
+      background: url("../../img/icon-linkedin.svg") 65% 50% no-repeat;
+  }
+  &--gh {
+    background: url("../../img/icon-github.svg") center no-repeat;
+  }
+  &:hover {
+    border-color: @orange;
+  }
+  &:active {
+    border-color: @lightgrey;
+    opacity:  0.3;
+  }
+}
+
+@media @tablet-widths {
+  .socials__wrapper {
+    margin-bottom: 90px;
+  }
+}

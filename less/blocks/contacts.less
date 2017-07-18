@@ -1,0 +1,115 @@
+.contacts {
+  margin: 0;
+  padding: 0;
+  color: #000000;
+}
+
+.contacts__wrapper {
+  .container();
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: center;
+}
+
+.contacts__title {
+  padding: 15px;
+  padding-top: 50px;
+  width: 200px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  text-align: center;
+  border-bottom: 2px solid #736588;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+.contacts__email {
+  position: relative;
+  display: block;
+  margin: 0;
+  padding-top: 60px;
+  padding-bottom: 20px;
+  text-align: center;
+  &::before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    width: 50px;
+    height: 50px;
+    vertical-align: middle;
+    background: url("../../img/icon-mail.svg") no-repeat;
+  }
+}
+
+.contacts__tel {
+  position: relative;
+  display: block;
+  margin: 0;
+  padding-top: 60px;
+  padding-bottom: 20px;
+  text-align: center;
+  &::before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    width: 50px;
+    height: 50px;
+    vertical-align: middle;
+    background: url("../../img/icon-cellphone.svg") no-repeat;
+  }
+}
+
+.contacts__skype {
+  position: relative;
+  display: block;
+  margin: 0;
+  padding-top: 60px;
+  padding-bottom: 20px;
+  text-align: center;
+  &::before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    width: 50px;
+    height: 50px;
+    vertical-align: middle;
+    background: url("../../img/icon-skype.svg") no-repeat;
+  }
+}
+
+.contacts__text {
+  color: #000000;
+  font-weight: bold;
+  text-decoration: none;
+  &:hover {
+    color: @orange;
+    text-decoration: underline;
+  }
+  &:active {
+    color: #000000;
+    opacity: 0.3;
+  }
+  &--notalink:hover, &--notalink:active {
+    color: #000000;
+    text-decoration: none;
+  }
+}
+
+@media @tablet-widths {
+  .contacts__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+
+}

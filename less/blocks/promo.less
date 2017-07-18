@@ -1,0 +1,66 @@
+.promo {
+  margin: 0;
+  padding: 0;
+}
+.promo__wrapper {
+  .container();
+  padding: 50px 0;
+  text-align: center;
+}
+
+.promo__title {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 40px;
+  font-size: 24px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.promo__author {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 20px;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: bold;
+  span{
+    display: block;
+  }
+}
+
+.promo__author-info {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 50px;
+}
+
+.promo__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.promo__item {
+  font-weight: bold;
+  span {
+    color: @orange;
+    text-transform: uppercase;
+  }
+}
+
+@media @tablet-widths {
+  .promo__author {
+    span{
+      display: inline-block;
+    }
+  }
+
+  .promo__list {
+    display: flex;
+    width: 660px;
+    margin: 0 auto;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
