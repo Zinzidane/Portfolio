@@ -31,19 +31,19 @@
         </button>
         <ul class="main-nav__list">
           <li class="main-nav__item">
-            <a href="#about">About</a>
+            <a href="#about" target="_self">About</a>
           </li>
           <li class="main-nav__item">
-          	<a href="#portfolio">Work</a>
+          	<a href="#portfolio" target="_self">Work</a>
           </li>
           <li class="main-nav__item">
-            <a href="#certificates">Certificates</a>
+            <a href="#certificates" target="_self">Certificates</a>
           </li>
           <li class="main-nav__item">
             <a href="https://jobs.tut.by/applicant/resumes/view?resume=8bf1641aff03c78f070039ed1f477048744d61">CV</a>
           </li>
           <li class="main-nav__item">
-            <a href="#contacts">Contacts</a>
+            <a href="#contacts" target="_self">Contacts</a>
           </li>
         </ul>
       </div>
@@ -51,7 +51,7 @@
     <section class="promo">
       <div class="promo__wrapper">
         <div class="promo__lang-container">
-          <span class="promo__lang-switch  promo__lang-switch--ru"><a href="index.html">Ru</a></span>
+          <span class="promo__lang-switch  promo__lang-switch--ru"><a href="index.html" target="_self">Ru</a></span>
           <span class="promo__lang-switch  promo__lang-switch--en  promo__lang-switch--active">En</span>
         </div>
         <h2 class="promo__title">Hello</h2>
@@ -139,7 +139,10 @@
             <article class="portfolio__item  slider__item" id="slide1">
               <div class="portfolio__img">
                 <a class="portfolio__item-link" href="zinzidane.github.io/382187-sedona/index.html">
-                  <img src="img/sedona-mobile.png" alt="Project Sedona fixed design">
+                  <picture>
+                    <source media="(min-width: 660px)" srcset="img/sedona-tablet.png">
+                    <img src="img/sedona-mobile.png" alt="Project Sedona fixed design">
+                  </picture>
                   <div class="portfolio__dropdown-link"><span>zinzidane.github.io/382187-sedona/index.html</span></div>
                 </a>
               </div>
@@ -149,7 +152,10 @@
             <article class="portfolio__item  slider__item" id="slide2">
               <div class="portfolio__img">
                 <a class="portfolio__item-link" href="zinzidane.github.io/382187-pink/index.html">
-                  <img src="img/pink.png" alt="Projet Pink responsive design">
+                  <picture>
+                    <source media="(min-width: 660px)" srcset="img/pink-tablet.png">
+                    <img src="img/pink.png" alt="Projet Pink responsive design">
+                  </picture>
                   <div class="portfolio__dropdown-link"><span>zinzidane.github.io/382187-pink/index.html</span></div>
                 </a>
               </div>

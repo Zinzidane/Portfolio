@@ -31,19 +31,19 @@
         </button>
         <ul class="main-nav__list">
           <li class="main-nav__item">
-            <a href="#about">Обо мне</a>
+            <a href="#about" target="_self">Обо мне</a>
           </li>
           <li class="main-nav__item">
-          	<a href="#portfolio">Портфолио</a>
+          	<a href="#portfolio" target="_self">Портфолио</a>
           </li>
           <li class="main-nav__item">
-            <a href="#certificates">Сертификаты</a>
+            <a href="#certificates" target="_self">Сертификаты</a>
           </li>
           <li class="main-nav__item">
             <a href="https://jobs.tut.by/applicant/resumes/view?resume=8bf1641aff03c78f070039ed1f477048744d61">Резюме</a>
           </li>
           <li class="main-nav__item">
-            <a href="#contacts">Контакты</a>
+            <a href="#contacts" target="_self">Контакты</a>
           </li>
         </ul>
       </div>
@@ -53,7 +53,7 @@
         <div class="promo__lang-container">
           <span class="promo__lang-switch  promo__lang-switch--ru  promo__lang-switch--active">Ru</span>
           <span class="promo__lang-switch  promo__lang-switch--en">
-            <a href="index-eng.html">En</a>
+            <a href="index-eng.html" target="_self">En</a>
           </span>
         </div>
         <h2 class="promo__title">Здравствуйте</h2>
@@ -140,7 +140,10 @@
             <article class="portfolio__item  slider__item" id="slide1">
               <div class="portfolio__img">
                 <a class="portfolio__item-link" href="https://zinzidane.github.io/382187-sedona/index.html">
-                  <img src="img/sedona-mobile.png" alt="Project Sedona fixed design">
+                  <picture>
+                    <source media="(min-width: 660px)" srcset="img/sedona-tablet.png">
+                    <img src="img/sedona-mobile.png" alt="Project Sedona fixed design">
+                  </picture>
                   <div class="portfolio__dropdown-link"><span>zinzidane.github.io/382187-sedona/index.html</span></div>
                 </a>
               </div>
@@ -150,7 +153,10 @@
             <article class="portfolio__item  slider__item" id="slide2">
               <div class="portfolio__img">
                 <a class="portfolio__item-link" href="https://zinzidane.github.io/382187-pink/index.html">
-                  <img src="img/pink.png" alt="Projet Pink responsive design">
+                  <picture>
+                    <source media="(min-width: 660px)" srcset="img/pink-tablet.png">
+                    <img src="img/pink.png" alt="Projet Pink responsive design">
+                  </picture>
                   <div class="portfolio__dropdown-link"><span>zinzidane.github.io/382187-pink/index.html</span></div>
                 </a>
               </div>
