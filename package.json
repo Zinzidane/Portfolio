@@ -32,6 +32,7 @@
     "gulp-rename": "^1.2.2",
     "gulp-svgmin": "^1.2.4",
     "gulp-svgstore": "^6.1.0",
-    "run-sequence": "^1.2.2"
+    "run-sequence": "^1.2.2",
+    "tiny-slider": "^1.5.5"
   }
 }
