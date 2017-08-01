@@ -7,6 +7,7 @@
   <base target="_blank">
   <link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="css/swiper.min.css">
 </head>
 <body>
 	<header class="page-header">
@@ -128,17 +129,11 @@
     <section class="portfolio" id="portfolio">
       <div class="portfolio__wrapper">
         <h2 class="portfolio__title">Портфолио</h2>
-        <div class="slider" id="mouse-drag">
-          <input class="slider__input" type="radio" id="btn-1" name="switch" checked>
-          <input class="slider__input" type="radio" id="btn-2" name="switch">
-          <input class="slider__input" type="radio" id="btn-3" name="switch">
-          <div class="slider__toggles">
-            <label for="btn-1">1</label>
-            <label for="btn-2">2</label>
-            <label for="btn-3">3</label>
-          </div>
-          <div class="portfolio__list  slider__items">
-            <article class="portfolio__item  slider__item" id="slide1">
+        <div class="swiper-container">
+        <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
               <div class="portfolio__img">
                 <a class="portfolio__item-link" href="https://zinzidane.github.io/382187-sedona/index.html">
                   <picture>
@@ -150,21 +145,21 @@
               </div>
               <h3 class="portfolio__item-title">Sedona</h3>
               <p class="portfolio__item-desc">HTML5, CSS3, Js, Fixed design</p>
-            </article>
-            <article class="portfolio__item  slider__item" id="slide2">
+            </div>
+            <div class="swiper-slide">
               <div class="portfolio__img">
-                <a class="portfolio__item-link" href="https://zinzidane.github.io/382187-pink/index.html">
-                  <picture>
-                    <source media="(min-width: 660px)" srcset="img/pink-tablet.png">
-                    <img src="img/pink-mobile.png" alt="Projet Pink responsive design">
-                  </picture>
-                  <div class="portfolio__dropdown-link"><span>zinzidane.github.io/382187-pink/index.html</span></div>
-                </a>
-              </div>
-              <h3 class="portfolio__item-title">Pink</h3>
-              <p class="portfolio__item-desc">HTML5, CSS3, Js, Responsive design</p>
-            </article>
-            <article class="portfolio__item  slider__item" id="slide3">
+                  <a class="portfolio__item-link" href="https://zinzidane.github.io/382187-pink/index.html">
+                    <picture>
+                      <source media="(min-width: 660px)" srcset="img/pink-tablet.png">
+                      <img src="img/pink-mobile.png" alt="Projet Pink responsive design">
+                    </picture>
+                    <div class="portfolio__dropdown-link"><span>zinzidane.github.io/382187-pink/index.html</span></div>
+                  </a>
+                </div>
+                <h3 class="portfolio__item-title">Pink</h3>
+                <p class="portfolio__item-desc">HTML5, CSS3, Js, Responsive design</p>
+            </div>
+            <div class="swiper-slide">
               <div class="portfolio__img">
                 <a class="portfolio__item-link" href="https://zinzidane.github.io/bikeshop/index.html">
                   <picture>
@@ -176,9 +171,14 @@
               </div>
               <h3 class="portfolio__item-title">Bikeshop</h3>
               <p class="portfolio__item-desc">HTML5, CSS3, Js, Responsive design</p>
-            </article>
-          </div>
+            </div>
         </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+        
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
       </div>
     </section>
 	</main>
@@ -199,5 +199,15 @@
     </section>
   </footer>
   <script src="js/script.js"></script>
+  <script src="js/swiper.min.js"></script>
+  <script>        
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        spaceBetween: 30
+    });     
+  </script>
 </body>
 </html>
