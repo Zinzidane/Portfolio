@@ -351,7 +351,7 @@ img {
   height: 30px;
   color: #ffffff;
   border-radius: 5px;
-  background-color: #ffd670;
+  background-color: #dab760;
 }
 .progress-bar__range--adobe {
   width: 50%;
@@ -363,7 +363,7 @@ img {
   width: 80%;
 }
 .progress-bar__range--js {
-  width: 35%;
+  width: 50%;
 }
 .progress-bar__skill {
   color: #ffffff;
