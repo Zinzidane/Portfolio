@@ -95,8 +95,8 @@
 
   // Функция валидация формы
   var validateForm = function () {
-    var addresserValid = validateTitleInput(addresser, addresser.minLength, addresser.maxLength);
-    var addresserMessageValid = validateTitleInput(addresserMessage, addresserMessage.minLength, addresserMessage.maxLength);
+    var addresserValid = validateInput(addresser, addresser.minLength, addresser.maxLength);
+    var addresserMessageValid = validateInput(addresserMessage, addresserMessage.minLength, addresserMessage.maxLength);
 
     return addresserValid && addresserMessageValid;
   };
