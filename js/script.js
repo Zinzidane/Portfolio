@@ -74,31 +74,8 @@
   var setDefaultForm = function () {
     form.reset();
     addresser.required = true;
-    addresser.minLength = 1;
-    addresser.maxLength = 100;
     email.required = true;
-    addresserMessage.minLength = 2;
-    addresserMessage.maxLength = 1000;
     addresserMessage.required = true;
-  };
-
- // Валидация текстового поля
-  var validateInput = function (textField, minLength, maxLength) {
-    if (textField.value.length < minLength || textField.value.length > maxLength) {
-      textField.style.borderColor = 'red';
-      return false;
-    }
-    textField.style.borderColor = '';
-    return true;
-  };
-
-
-  // Функция валидация формы
-  var validateForm = function () {
-    var addresserValid = validateInput(addresser, addresser.minLength, addresser.maxLength);
-    var addresserMessageValid = validateInput(addresserMessage, addresserMessage.minLength, addresserMessage.maxLength);
-
-    return addresserValid && addresserMessageValid;
   };
 
 
@@ -134,7 +111,5 @@
   // Проверка правильности заполнения полей формы
   form.addEventListener('submit', function (evt) {
     evt.preventDefault();
-    if (validateForm()) {
-      window.backend.save(onSuccess, onError, new FormData(form));s
-    }
+    window.backend.save(onSuccess, onError, new FormData(form));s
   });
