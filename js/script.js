@@ -81,8 +81,10 @@
 
   var onSuccess = function () {
     setDefaultForm();
+    var htmlLang = document.getElementsByTagName('html')[0].getAttribute('lang');
     var node = document.createElement('div');
     node.style.margin = 'auto';
+    node.style.padding = '10px';
     node.style.textAlign = 'center';
     node.style.backgroundColor = 'white';
     node.style.position = 'relative';
@@ -90,13 +92,19 @@
     node.style.right = 0;
     node.style.fontSize = '30px';
     node.style.color = 'black';
-    node.textContent = 'Данные успешно отправлены';
+    if (htmlLang="ru") {
+      node.textContent = 'Отправлено!';
+    } else {
+      node.textContent = 'Sent!';
+    }
     form.insertAdjacentElement('afterbegin', node);
+    setTimeout(function () {return node.style.display = "none"}, 4000);
   };
 
   var onError = function (errorMessage) {
     var node = document.createElement('div');
     node.style.margin = 'auto';
+    node.style.padding = '10px';
     node.style.textAlign = 'center';
     node.style.backgroundColor = 'red';
     node.style.position = 'relative';
@@ -106,6 +114,7 @@
     node.style.color = 'white';
     node.textContent = errorMessage;
     form.insertAdjacentElement('afterbegin', node);
+    setTimeout(function () {return node.style.display = "none"}, 4000);
   };
 
   // Проверка правильности заполнения полей формы
