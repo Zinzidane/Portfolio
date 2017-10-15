@@ -61,7 +61,7 @@
   };
   window.backend = {
     save: function (onLoad, onError, data) {
-      sendRequest('POST', URL, onLoad, onError, datas);
+      sendRequest('POST', URL, onLoad, onError, data);
     }
   };
 
@@ -91,7 +91,7 @@
     node.style.fontSize = '30px';
     node.style.color = 'black';
     node.textContent = 'Данные успешно отправлены';
-    document.querySelector('.page-footer').insertAdjacentElement('beforeend', node);
+    form.insertAdjacentElement('afterbegin', node);
   };
 
   var onError = function (errorMessage) {
@@ -105,11 +105,11 @@
     node.style.fontSize = '30px';
     node.style.color = 'white';
     node.textContent = errorMessage;
-    document.querySelector('.page-footer').insertAdjacentElement('beforeend', node);
+    form.insertAdjacentElement('afterbegin', node);
   };
 
   // Проверка правильности заполнения полей формы
   form.addEventListener('submit', function (evt) {
     evt.preventDefault();
-    window.backend.save(onSuccess, onError, new FormData(form));s
+    window.backend.save(onSuccess, onError, new FormData(form));
   });
