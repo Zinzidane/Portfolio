@@ -77,8 +77,8 @@
     addresser.minLength = 1;
     addresser.maxLength = 100;
     email.required = true;
-    addresserMessage.min = 2;
-    addresserMessage.max = 1000;
+    addresserMessage.minLength = 2;
+    addresserMessage.maxLength = 1000;
     addresserMessage.required = true;
   };
 
