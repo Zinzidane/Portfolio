@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/style.min.css">
   <link rel="stylesheet" href="css/swiper.min.css">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
 	<header class="page-header">
@@ -232,6 +233,12 @@
           <a class="contacts__text  contacts__text--notalink">ivan.muliarchik</a>
         </p>
       </div>
+      <form class="contacts__form" action="https://formspree.io/ya-gans@mail.ru" method="POST">
+        <input class="contacts__input" type="text" name="name" placeholder="ВАШЕ ИМЯ">
+        <input class="contacts__input" type="email" name="_replyto" placeholder="ВАША ЭЛЕКТРОННАЯ ПОЧТА">
+        <textarea class="contacts__input  contacts__textarea" name="message" placeholder="ВАШЕ СООБЩЕНИЕ"></textarea>
+        <input class="contacts__btn" type="submit" value="Отправить">
+      </form>
     </section>
   </footer>
   <script src="js/script.js"></script>

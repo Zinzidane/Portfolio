@@ -788,3 +788,53 @@ input[type="radio"]#btn-3:checked ~ .slider__items #slide3 {
             align-items: flex-start;
   }
 }
+
+.contacts__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  width: 94%;
+  max-width: 940px;
+}
+
+.contacts__input {
+  width: 100%;
+  margin-bottom: 13px;
+  padding: 10px;
+  border-radius: 4px;
+  background-color: rgb(243, 243, 243);
+  height: 50px;
+  color: #000;
+  font-family: inherit;
+  font: inherit;
+}
+
+.contacts__textarea {
+  min-height: 120px;
+}
+
+.contacts__btn {
+  border-radius: 4px;
+  background-color: rgb(255, 214, 112);
+  width: 273px;
+  height: 65px;
+  color: #000;
+  font-family: inherit;
+  font: inherit;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.contacts__btn:hover {
+  background-color: #000;
+  color: #ffd670;
+}
+
+.contacts__btn:active {
+  background-color: #000;
+  color: #ffd670;
+  opacity: 0.3;
+}
