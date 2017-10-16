@@ -119,6 +119,5 @@
 
   // Проверка правильности заполнения полей формы
   form.addEventListener('submit', function (evt) {
-    evt.preventDefault();
     window.backend.save(onSuccess, onError, new FormData(form));
   });
