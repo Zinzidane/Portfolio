@@ -2,6 +2,9 @@
 
 var gulp = require("gulp");
 var less = require("gulp-less");
+var concat = require("gulp-concat");
+var uglify = require("gulp-uglify");
+var pump = require('pump');
 var plumber = require("gulp-plumber");
 var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
@@ -32,6 +35,18 @@ gulp.task("style", function() {
     .pipe(minify())
     .pipe(rename("style.min.css"))
     .pipe(gulp.dest("build/css"));
+});
+
+ 
+gulp.task("compress", function (cb) {
+  pump([
+        gulp.src("js/*.js"),
+        concat("bundle.min.js"),
+        uglify(),
+        gulp.dest("build/js")
+    ],
+    cb
+  );
 });
 
 gulp.task("images", function() {
@@ -85,6 +100,7 @@ gulp.task("build", function(fn){
     "clean",
     "copy",
     "style",
+    "compress",
     "images",
     "symbols",
     fn
