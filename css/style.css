@@ -607,6 +607,25 @@ img {
   margin-bottom: 40px;
   width: 100px;
   height: 100px;
+  cursor: pointer;
+  -webkit-transition: all .6s ease;
+  transition: all .6s ease;
+}
+.promo__logo:hover {
+  -webkit-animation: spin 2s infinite linear;
+          animation: spin 2s infinite linear;
+}
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
 .promo__title {
   margin: 0;
@@ -1042,6 +1061,7 @@ img {
           align-items: center;
   margin: 0 auto;
   margin-bottom: 30px;
+  width: 94%;
   max-width: 740px;
 }
 .contacts__form-group {
@@ -1064,6 +1084,15 @@ img {
   color: #000;
   font-family: inherit;
   font: inherit;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+.contacts__input:hover {
+  background-color: #000000;
+  color: #ffffff;
+  border: 2px solid #ffd670;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
 }
 .contacts__textarea {
   min-height: 120px;

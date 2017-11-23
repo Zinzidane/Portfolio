@@ -60,9 +60,21 @@
 }
 
 .promo__logo {
-  margin-bottom: 40px;
-  width: 100px;
-  height: 100px;
+    margin-bottom: 40px;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    transition: all .6s ease;
+}
+
+.promo__logo:hover {
+    animation: spin 2s infinite linear;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .promo__title {
