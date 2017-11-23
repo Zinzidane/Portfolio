@@ -4,6 +4,7 @@ var gulp = require("gulp");
 var less = require("gulp-less");
 var concat = require("gulp-concat");
 var uglify = require("gulp-uglify");
+var gzip = require("gulp-gzip");
 var pump = require('pump');
 var plumber = require("gulp-plumber");
 var postcss = require("gulp-postcss");
@@ -43,6 +44,7 @@ gulp.task("compress", function (cb) {
         gulp.src("js/*.js"),
         concat("bundle.min.js"),
         uglify(),
+        gzip(),
         gulp.dest("build/js")
     ],
     cb
